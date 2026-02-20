@@ -16,52 +16,59 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'Build Beyond Studio — Tech Partner for Agencies | Web Applications & DevOps',
-  description: 'Build Beyond Studio partners with agencies to deliver stunning, production-ready web applications. Scale without building from scratch. MERN stack, DevOps, cloud infrastructure, and white-label solutions for modern agencies.',
-  keywords: ['web development agency', 'MERN stack', 'DevOps', 'white-label solutions', 'production-ready applications', 'tech partner'],
+  metadataBase: new URL('https://buildbeyondstudio.com'),
+
+  title: {
+    default: 'Build Beyond Studio | Web Development & DevOps Partner for Agencies',
+    template: '%s | Build Beyond Studio',
+  },
+
+  description:
+    'Build Beyond Studio is a web development and DevOps partner for agencies. We build fast, scalable, production-ready web applications using MERN stack and modern cloud infrastructure.',
+
   authors: [{ name: 'Build Beyond Studio' }],
   creator: 'Build Beyond Studio',
   publisher: 'Build Beyond Studio',
-  robots: 'index, follow',
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  alternates: {
+    canonical: 'https://buildbeyondstudio.com',
+  },
+
   openGraph: {
     type: 'website',
-    locale: 'en_US',
     url: 'https://buildbeyondstudio.com',
-    title: 'Build Beyond Studio — Tech Partner for Agencies',
-    description: 'Scale your agency with production-ready web applications. MERN stack, DevOps expertise, and white-label solutions.',
-    images: [{
-      url: '/logo.ico',
-      width: 1200,
-      height: 630,
-      alt: 'Build Beyond Studio',
-    }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Build Beyond Studio',
-    description: 'Tech partner for agencies delivering production-ready web applications',
-    images: ['/logo.ico'],
-    creator: '@buildbeyondstudio',
-  },
-  generator: 'v0.app',
-  icons: {
-    icon: [
-      { url: '/favicon.ico' },
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
-      { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
-    ],
-    apple: '/apple-touch-icon.png',
-    other: [
+    title: 'Build Beyond Studio | Web Development Partner for Agencies',
+    description:
+      'Scale your agency with production-ready web applications. MERN stack, DevOps expertise, and white-label solutions.',
+    siteName: 'Build Beyond Studio',
+    images: [
       {
-        rel: 'manifest',
-        url: '/site.webmanifest',
+        url: 'https://buildbeyondstudio.com/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Build Beyond Studio – Web Development Partner',
       },
     ],
   },
-  metadataBase: new URL('https://buildbeyondstudio.com'),
-}
+
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Build Beyond Studio',
+    description:
+      'Web development & DevOps partner delivering production-ready applications.',
+    images: ['https://buildbeyondstudio.com/og-image.png'],
+    creator: '@buildbeyondstudio',
+  },
+
+  icons: {
+    icon: '/favicon.ico',
+  },
+};
 
 export default function RootLayout({
   children,
