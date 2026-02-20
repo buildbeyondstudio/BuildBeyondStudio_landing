@@ -64,8 +64,8 @@ export default function WhyUs() {
     <section id="why" className="bg-white py-24 md:py-32 px-6" ref={sectionRef}>
       <div className="max-w-6xl mx-auto">
         <div ref={titleRef} className="opacity-0 text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Why Build Beyond Studio?</h2>
-          <p className="text-lg text-gray-600">We're not selling services. We're building partnerships.</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Why Choose Build Beyond Studio?</h2>
+          <p className="text-lg text-gray-600">Leading web development agency for agencies seeking production-ready applications</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-16">

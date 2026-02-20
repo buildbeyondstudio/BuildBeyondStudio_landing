@@ -177,7 +177,7 @@ export default function Hero() {
             transition: 'transform 0.4s cubic-bezier(0.23, 1, 0.320, 1)'
           }}
         >
-          <span className="inline-block">Production-Ready</span>
+          <span className="inline-block">Build Beyond Studio:</span>
           <br />
           <span className="inline-block">
             <span className="relative inline-block">
@@ -253,7 +253,7 @@ export default function Hero() {
             onClick={() => document.getElementById('cases')?.scrollIntoView({ behavior: 'smooth' })}
             className="cursor-pointer border-2 border-blue-600 bg-white/30 backdrop-blur-md text-blue-600 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg hover:bg-white/60 hover:border-blue-700 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 font-semibold text-sm sm:text-base transform hover:scale-105 active:scale-95 w-full sm:w-auto group"
           >
-            <span className="group-hover:text-blue-700 transition-colors">View Case Studies</span>
+            <span className="group-hover:text-blue-700 transition-colors">See Our Work</span>
           </button>
         </div>
 

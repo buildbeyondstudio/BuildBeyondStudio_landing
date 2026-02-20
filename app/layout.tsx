@@ -19,12 +19,12 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://buildbeyondstudio.com'),
 
   title: {
-    default: 'Build Beyond Studio | Premium Design & Development Agency',
+    default: 'Build Beyond Studio | Web Development & DevOps Agency',
     template: '%s | Build Beyond Studio',
   },
 
   description:
-    'Strategic branding, conversion-focused web design, and creative direction for modern businesses. Premium digital solutions by Build Beyond Studio.',
+    'Build Beyond Studio – Production-ready web applications with MERN stack, DevOps deployment, and white-label solutions for agencies.',
 
   authors: [{ name: 'Build Beyond Studio' }],
   creator: 'Build Beyond Studio',
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://buildbeyondstudio.com',
-    title: 'Build Beyond Studio | Premium Design & Development',
+    title: 'Build Beyond Studio | Web Development & DevOps Partner',
     description:
-      'Strategic branding, conversion-focused design, and creative direction for modern businesses.',
+      'Production-ready web applications with MERN stack, DevOps, and white-label solutions for agencies.',
     siteName: 'Build Beyond Studio',
     images: [
       {
@@ -78,24 +78,41 @@ export default function RootLayout({
   const schemaData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Build Beyond Studio',
-    url: 'https://buildbeyondstudio.com',
-    logo: 'https://buildbeyondstudio.com/logo.ico',
-    description: 'Premium branding, design, and digital solutions for modern businesses.',
-    sameAs: [
+    'name': 'Build Beyond Studio',
+    'url': 'https://buildbeyondstudio.com',
+    'logo': 'https://buildbeyondstudio.com/logo.ico',
+    'description': 'Web development and DevOps agency specializing in production-ready applications, MERN stack, and white-label solutions for agencies and startups.',
+    'foundingDate': '2023',
+    'sameAs': [
       'https://www.linkedin.com/company/buildbeyondstudio',
       'https://github.com/buildbeyondstudio'
     ],
-    contactPoint: {
+    'contactPoint': {
       '@type': 'ContactPoint',
-      telephone: '+91-93015-79493',
-      contactType: 'Sales/Partnership'
-    }
+      'telephone': '+91-93015-79493',
+      'contactType': 'Sales/Partnership',
+      'areaServed': 'Worldwide'
+    },
+    'address': {
+      '@type': 'PostalAddress',
+      'streetAddress': 'India',
+      'addressCountry': 'IN'
+    },
+    'knowsAbout': [
+      'Web Application Development',
+      'MERN Stack',
+      'DevOps',
+      'Cloud Deployment',
+      'White-Label Solutions'
+    ]
   };
 
   return (
     <html lang="en">
       <head>
+        <meta name="keywords" content="web development agency, MERN stack development, DevOps services, white-label solutions, web application development, Build Beyond Studio" />
+        <meta name="author" content="Build Beyond Studio" />
+        <meta name="robots" content="index, follow" />
         <Script
           id="structured-data"
           type="application/ld+json"

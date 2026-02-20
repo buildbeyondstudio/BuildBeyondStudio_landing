@@ -12,8 +12,8 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
         <div className="flex items-center gap-2 sm:gap-3">
           <Image
-            src="/logo.png"
-            alt="Build Beyond Studio Logo"
+            src="/logo.ico"
+            alt="Build Beyond Studio - Web Development & DevOps Agency"
             width={40}
             height={40}
             className="w-9 sm:w-10 h-9 sm:h-10 flex-shrink-0"
