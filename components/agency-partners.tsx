@@ -73,7 +73,7 @@ export default function AgencyPartners() {
                 className="opacity-0 bg-gray-50 p-6 rounded-xl border border-gray-200"
               >
                 <div className="flex gap-4">
-                  <div className="text-red-500 font-bold text-lg flex-shrink-0">✕</div>
+                  <div className="text-red-500 font-bold text-lg shrink-0">✕</div>
                   <div>
                     <h4 className="font-bold text-black mb-2">{item.issue}</h4>
                     <p className="text-gray-600 text-sm">
@@ -91,8 +91,8 @@ export default function AgencyPartners() {
           <h3 className="text-2xl font-bold text-black mb-12 text-center">How We Work With You</h3>
           <div className="relative">
             {/* Connecting line (hidden on mobile) */}
-            <div className="hidden lg:block absolute top-8 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-200 via-blue-400 to-blue-200 z-0"></div>
-            
+            <div className="hidden lg:block absolute top-8 left-0 right-0 h-0.5 bg-linear-to-r from-blue-200 via-blue-400 to-blue-200 z-0"></div>
+
             <div className="grid md:grid-cols-5 gap-4 relative z-10">
               {workflow.map((item, index) => (
                 <div

@@ -12,33 +12,39 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
         <div className="flex items-center gap-2 sm:gap-3">
           <Image
-            src="/logo.png"
-            alt="Build Beyond Studio Logo"
+            src="/logo.ico"
+            alt="Build Beyond Studio - Web Development & DevOps Agency"
             width={40}
             height={40}
-            className="w-9 sm:w-10 h-9 sm:h-10 flex-shrink-0"
+            className="w-9 sm:w-10 h-9 sm:h-10 shrink-0"
           />
           <span className="font-semibold text-black text-sm sm:text-lg">Build Beyond Studio</span>
         </div>
 
         <nav className="hidden md:flex items-center gap-6">
-          <a href="#services" className="text-black hover:text-blue-600 transition-colors text-sm">
+          <a href="/" className="text-black hover:text-blue-600 transition-colors text-sm font-medium">
+            Home
+          </a>
+          <a href="/#services" className="text-black hover:text-blue-600 transition-colors text-sm">
             Services
           </a>
-          <a href="#cases" className="text-black hover:text-blue-600 transition-colors text-sm">
+          <a href="/services/web-applications" className="text-black hover:text-blue-600 transition-colors text-sm">
+            Web Applications
+          </a>
+          <a href="/#cases" className="text-black hover:text-blue-600 transition-colors text-sm">
             Case Studies
           </a>
-          <a href="#why" className="text-black hover:text-blue-600 transition-colors text-sm">
+          <a href="/#why" className="text-black hover:text-blue-600 transition-colors text-sm">
             Why Us
           </a>
-          <a href="#partners" className="text-black hover:text-blue-600 transition-colors text-sm">
+          <a href="/#partners" className="text-black hover:text-blue-600 transition-colors text-sm">
             For Agencies
+          </a>
+          <a href="/blog" className="text-black hover:text-blue-600 transition-colors text-sm">
+            Blog
           </a>
           <a href="https://wa.me/919301579493?text=Hi%21%20I%20would%20like%20to%20discuss%20partnership%20opportunities%20with%20your%20agency." target="_blank" rel="noopener noreferrer" className="cursor-pointer inline-flex items-center justify-center w-10 h-10 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-all hover:shadow-lg" title="WhatsApp">
             <FaWhatsapp className="w-5 h-5" />
-          </a>
-          <a href="#contact" className="cursor-pointer inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-all hover:shadow-lg text-sm font-medium">
-            Book a Call
           </a>
         </nav>
 
@@ -60,24 +66,30 @@ export default function Header() {
 
       {isMenuOpen && (
         <nav className="md:hidden bg-white/95 backdrop-blur-md border-t border-gray-200/50 px-6 py-4 flex flex-col gap-4">
-          <a href="#services" className="text-black hover:text-blue-600 transition-colors">
+          <a href="/" className="text-black hover:text-blue-600 transition-colors font-medium">
+            Home
+          </a>
+          <a href="/#services" className="text-black hover:text-blue-600 transition-colors">
             Services
           </a>
-          <a href="#cases" className="text-black hover:text-blue-600 transition-colors">
+          <a href="/services/web-applications" className="text-black hover:text-blue-600 transition-colors">
+            Web Applications
+          </a>
+          <a href="/#cases" className="text-black hover:text-blue-600 transition-colors">
             Case Studies
           </a>
-          <a href="#why" className="text-black hover:text-blue-600 transition-colors">
+          <a href="/#why" className="text-black hover:text-blue-600 transition-colors">
             Why Us
           </a>
-          <a href="#partners" className="text-black hover:text-blue-600 transition-colors">
+          <a href="/#partners" className="text-black hover:text-blue-600 transition-colors">
             For Agencies
+          </a>
+          <a href="/blog" className="text-black hover:text-blue-600 transition-colors">
+            Blog
           </a>
           <a href="https://wa.me/919301579493?text=Hi%21%20I%20would%20like%20to%20discuss%20partnership%20opportunities%20with%20your%20agency." target="_blank" rel="noopener noreferrer" className="cursor-pointer inline-flex items-center justify-center gap-2 bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600 transition-all font-medium w-full">
             <FaWhatsapp className="w-4 h-4" />
             WhatsApp
-          </a>
-          <a href="#contact" className="cursor-pointer inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-all hover:shadow-lg font-medium w-full text-center">
-            Book a Call
           </a>
         </nav>
       )}

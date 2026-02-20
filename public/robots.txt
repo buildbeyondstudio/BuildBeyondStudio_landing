@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://buildbeyondstudio.com
+
+# Sitemaps
+Sitemap: https://buildbeyondstudio.com/sitemap.xml

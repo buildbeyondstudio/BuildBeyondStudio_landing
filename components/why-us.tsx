@@ -64,8 +64,8 @@ export default function WhyUs() {
     <section id="why" className="bg-white py-24 md:py-32 px-6" ref={sectionRef}>
       <div className="max-w-6xl mx-auto">
         <div ref={titleRef} className="opacity-0 text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Why Build Beyond Studio?</h2>
-          <p className="text-lg text-gray-600">We're not selling services. We're building partnerships.</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Why Choose Build Beyond Studio?</h2>
+          <p className="text-lg text-gray-600">Leading web development agency for agencies seeking production-ready applications</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-16">
@@ -77,9 +77,9 @@ export default function WhyUs() {
               }}
               className="opacity-0 group"
             >
-              <div className="bg-gradient-to-br from-gray-50 to-white p-8 md:p-10 rounded-2xl border border-gray-200 hover:border-blue-500 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+              <div className="bg-linear-to-br from-gray-50 to-white p-8 md:p-10 rounded-2xl border border-gray-200 hover:border-blue-500 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                 <div className="flex items-start justify-between mb-6">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl group-hover:scale-110 transition-transform duration-300">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-linear-to-br from-blue-100 to-blue-50 rounded-xl group-hover:scale-110 transition-transform duration-300">
                     <div className="text-3xl">{item.icon}</div>
                   </div>
                   <div className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-bold">
@@ -94,7 +94,7 @@ export default function WhyUs() {
         </div>
 
         {/* Comparison Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-blue-500 rounded-2xl p-8 md:p-12 text-white mb-16">
+        <div className="bg-linear-to-r from-blue-600 to-blue-500 rounded-2xl p-8 md:p-12 text-white mb-16">
           <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center">Our Guarantee</h3>
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
