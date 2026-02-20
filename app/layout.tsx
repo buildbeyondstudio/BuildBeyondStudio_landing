@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: 'Build Beyond Studio — Tech Partner for Agencies',
     description: 'Scale your agency with production-ready web applications. MERN stack, DevOps expertise, and white-label solutions.',
     images: [{
-      url: '/logo.png',
+      url: '/logo.ico',
       width: 1200,
       height: 630,
       alt: 'Build Beyond Studio',
@@ -40,29 +40,27 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Build Beyond Studio',
     description: 'Tech partner for agencies delivering production-ready web applications',
-    images: ['/logo.png'],
+    images: ['/logo.ico'],
     creator: '@buildbeyondstudio',
   },
   generator: 'v0.app',
   icons: {
     icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
+    other: [
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        rel: 'manifest',
+        url: '/site.webmanifest',
       },
     ],
-    apple: '/apple-icon.png',
   },
   metadataBase: new URL('https://buildbeyondstudio.com'),
-  canonical: 'https://buildbeyondstudio.com',
 }
 
 export default function RootLayout({
@@ -75,7 +73,7 @@ export default function RootLayout({
     '@type': 'Organization',
     name: 'Build Beyond Studio',
     url: 'https://buildbeyondstudio.com',
-    logo: 'https://buildbeyondstudio.com/logo.png',
+    logo: 'https://buildbeyondstudio.com/logo.ico',
     description: 'Scale your agency with production-ready web applications. MERN stack, DevOps expertise, and white-label solutions.',
     sameAs: [
       'https://www.linkedin.com/company/buildbeyondstudio',
