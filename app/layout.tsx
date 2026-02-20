@@ -19,12 +19,12 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://buildbeyondstudio.com'),
 
   title: {
-    default: 'Build Beyond Studio | Web Development & DevOps Partner for Agencies',
+    default: 'Build Beyond Studio | Premium Design & Development Agency',
     template: '%s | Build Beyond Studio',
   },
 
   description:
-    'Build Beyond Studio is a web development and DevOps partner for agencies. We build fast, scalable, production-ready web applications using MERN stack and modern cloud infrastructure.',
+    'Strategic branding, conversion-focused web design, and creative direction for modern businesses. Premium digital solutions by Build Beyond Studio.',
 
   authors: [{ name: 'Build Beyond Studio' }],
   creator: 'Build Beyond Studio',
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://buildbeyondstudio.com',
-    title: 'Build Beyond Studio | Web Development Partner for Agencies',
+    title: 'Build Beyond Studio | Premium Design & Development',
     description:
-      'Scale your agency with production-ready web applications. MERN stack, DevOps expertise, and white-label solutions.',
+      'Strategic branding, conversion-focused design, and creative direction for modern businesses.',
     siteName: 'Build Beyond Studio',
     images: [
       {
@@ -81,7 +81,7 @@ export default function RootLayout({
     name: 'Build Beyond Studio',
     url: 'https://buildbeyondstudio.com',
     logo: 'https://buildbeyondstudio.com/logo.ico',
-    description: 'Scale your agency with production-ready web applications. MERN stack, DevOps expertise, and white-label solutions.',
+    description: 'Premium branding, design, and digital solutions for modern businesses.',
     sameAs: [
       'https://www.linkedin.com/company/buildbeyondstudio',
       'https://github.com/buildbeyondstudio'

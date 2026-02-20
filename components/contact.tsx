@@ -63,8 +63,8 @@ export default function Contact() {
     <section id="contact" className="bg-gray-50 py-20 md:py-32 px-4 sm:px-6" ref={sectionRef}>
       <div className="max-w-5xl mx-auto">
         <div ref={titleRef} className="opacity-0 text-center mb-12 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-3 md:mb-4">Let's Build Together</h2>
-          <p className="text-base sm:text-lg text-gray-700">Book a quick call to discuss partnership opportunities</p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-3 md:mb-4">Let's Build Something Great</h2>
+          <p className="text-base sm:text-lg text-gray-700">Book a strategy call to discuss your vision and how we can bring it to life.</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
