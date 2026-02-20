@@ -156,9 +156,9 @@ export default function CaseStudies() {
               onClick={() => setSelectedStudy(index)}
               className="opacity-0 group cursor-pointer"
             >
-              <div className="h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 flex flex-col overflow-hidden hover:shadow-blue-500/10">
+              <div className="h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-2xl border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 flex flex-col overflow-hidden hover:shadow-blue-500/10">
                 {/* Image Carousel - Larger & Premium */}
-                <div className="relative h-40 sm:h-48 md:h-56 bg-gray-700 overflow-hidden flex-shrink-0 group">
+                <div className="relative h-40 sm:h-48 md:h-56 bg-gray-700 overflow-hidden shrink-0 group">
                   <img
                     src={study.screenshots[currentScreenshots[index] || 0]}
                     alt={`${study.title} screenshot`}
@@ -200,7 +200,7 @@ export default function CaseStudies() {
                 </div>
 
                 {/* Content */}
-                <div className="p-6 sm:p-8 flex flex-col flex-grow">
+                <div className="p-6 sm:p-8 flex flex-col grow">
                   {/* Industry Badge */}
                   <p className="text-xs font-semibold text-blue-400 mb-3 uppercase tracking-wider">{study.industry}</p>
 
@@ -210,7 +210,7 @@ export default function CaseStudies() {
                   </h3>
 
                   {/* Problem & Solution */}
-                  <div className="space-y-5 mb-6 flex-grow">
+                  <div className="space-y-5 mb-6 grow">
                     <div className="border-l-2 border-blue-500 pl-4">
                       <p className="text-xs font-semibold text-gray-400 uppercase mb-2">Challenge</p>
                       <p className="text-sm text-gray-300 leading-relaxed">{study.problem}</p>
@@ -242,18 +242,18 @@ export default function CaseStudies() {
           onClick={() => setSelectedStudy(null)}
         >
           <div
-            className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl w-full max-w-6xl max-h-[95vh] overflow-y-auto shadow-2xl animate-scale-in my-auto border border-gray-700"
+            className="bg-linear-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl w-full max-w-6xl max-h-[95vh] overflow-y-auto shadow-2xl animate-scale-in my-auto border border-gray-700"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
-            <div className="sticky top-0 bg-gradient-to-r from-gray-900 to-gray-800 border-b border-gray-700 z-10 p-6 sm:p-8 flex items-start justify-between">
+            <div className="sticky top-0 bg-linear-to-r from-gray-900 to-gray-800 border-b border-gray-700 z-10 p-6 sm:p-8 flex items-start justify-between">
               <div className="flex-1">
                 <p className="text-xs sm:text-sm font-semibold text-blue-400 uppercase tracking-wider mb-2">{caseStudies[selectedStudy].industry}</p>
                 <h2 className="text-2xl sm:text-4xl font-bold text-white">{caseStudies[selectedStudy].title}</h2>
               </div>
               <button
                 onClick={() => setSelectedStudy(null)}
-                className="cursor-pointer flex-shrink-0 text-gray-400 hover:text-white transition-colors p-2 hover:bg-gray-700 rounded-lg ml-4"
+                className="cursor-pointer shrink-0 text-gray-400 hover:text-white transition-colors p-2 hover:bg-gray-700 rounded-lg ml-4"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -313,7 +313,7 @@ export default function CaseStudies() {
                 </div>
 
                 {/* Results */}
-                <div className="group bg-gradient-to-br from-blue-600/10 to-blue-500/5 border border-blue-500/20 rounded-xl p-6 group-hover:border-blue-500/40 group-hover:from-blue-600/15 transition-all">
+                <div className="group bg-linear-to-br from-blue-600/10 to-blue-500/5 border border-blue-500/20 rounded-xl p-6 group-hover:border-blue-500/40 group-hover:from-blue-600/15 transition-all">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-600/30 rounded-lg mb-4 border border-blue-500/50">
                     <span className="text-lg text-blue-300 font-bold">④</span>
                   </div>
