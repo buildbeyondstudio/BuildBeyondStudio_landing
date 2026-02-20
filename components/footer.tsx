@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-16 md:py-20 px-6">
+    <footer className="bg-black text-white py-16 md:py-20 px-6 relative">
       <div className="max-w-6xl mx-auto">
         {/* Main Section */}
         <div className="text-center mb-16">
@@ -38,10 +38,16 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-gray-800 pt-8">
+        <div className="border-t border-gray-800 pt-8 relative">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
             <p>Let's build something great together</p>
             <p>&copy; {new Date().getFullYear()} Build Beyond Studio. All rights reserved.</p>
+          </div>
+
+          {/* Premium minimal address in corner */}
+          <div className="absolute bottom-8 right-6 text-right text-sm text-gray-300 font-light tracking-wide leading-relaxed">
+            <p>Ambikapur, Surguja</p>
+            <p>Chhattisgarh 497001</p>
           </div>
         </div>
       </div>
