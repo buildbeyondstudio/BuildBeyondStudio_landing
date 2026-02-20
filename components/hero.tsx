@@ -165,7 +165,7 @@ export default function Hero() {
         {/* Decorative circles above title */}
         <div className="flex items-center justify-center gap-3 mb-4 sm:mb-5 opacity-0 animate-slide-in-up">
           <div className="w-1.5 h-1.5 bg-gradient-to-r from-blue-400 to-blue-300 rounded-full"></div>
-          <span className="text-xs sm:text-sm font-medium text-gray-500 uppercase tracking-widest">Building Excellence</span>
+          <span className="text-xs sm:text-sm font-medium text-gray-500 uppercase tracking-widest">Tech Partner for Agencies</span>
           <div className="w-1.5 h-1.5 bg-gradient-to-r from-blue-300 to-blue-400 rounded-full"></div>
         </div>
 
@@ -177,11 +177,11 @@ export default function Hero() {
             transition: 'transform 0.4s cubic-bezier(0.23, 1, 0.320, 1)'
           }}
         >
-          <span className="inline-block">The Tech</span>
+          <span className="inline-block">Production-Ready</span>
           <br />
           <span className="inline-block">
             <span className="relative inline-block">
-              <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 bg-clip-text text-transparent font-black">Partner</span>
+              <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 bg-clip-text text-transparent font-black">Web Applications</span>
               <span className="absolute inset-0 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 blur-xl opacity-20 -z-10" style={{
                 animation: 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite'
               }}></span>
@@ -193,7 +193,7 @@ export default function Hero() {
             </span>
           </span>
           <br />
-          <span className="text-gray-900">Behind the Brand</span>
+          <span className="text-gray-900">Built to Scale</span>
         </h1>
 
         <p
@@ -201,19 +201,19 @@ export default function Hero() {
           className="opacity-0 text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed font-light"
         >
           Partner with us to deliver stunning, <span className="font-semibold text-gray-900 relative">
-            production-ready web applications
+            production-ready web applications.
             <div className="absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r from-blue-500/0 via-blue-500/50 to-blue-500/0" style={{
               animation: 'slideIn 1.2s ease-out 0.8s forwards',
               opacity: 0
             }}></div>
-          </span>—while you focus on client relationships. White-label or co-branded, we handle the technical excellence.
+          </span> While you focus on client relationships, we handle MERN stack, DevOps, and technical excellence. White-label or co-branded.
         </p>
 
         <div ref={trustRef} className="opacity-0 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 md:gap-7 mb-6 sm:mb-8 flex-wrap">
           {[
-            { icon: '⚡', label: '10+ Delivered Projects' },
-            { icon: '🛠️', label: 'MERN + DevOps Expertise' },
-            { icon: '🚀', label: 'Fast Turnaround' }
+            { icon: '✓', label: 'MERN Stack Expert' },
+            { icon: '✓', label: 'DevOps & Deployment' },
+            { icon: '✓', label: 'White-Label Ready' }
           ].map((item, idx) => (
             <div
               key={idx}

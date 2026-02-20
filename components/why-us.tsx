@@ -4,28 +4,28 @@ import { useEffect, useRef } from 'react';
 
 const differentiators = [
   {
-    icon: '📋',
-    title: 'Structured Workflow',
-    description: 'Clear milestones & documented process. No surprises, no ambiguity.',
-    metric: '100% Transparent',
+    icon: '🧠',
+    title: 'Strategic Thinking',
+    description: 'Every decision rooted in data. Every design choice purposeful. No guesswork.',
+    metric: 'Data-Driven',
   },
   {
-    icon: '⚡',
-    title: 'DevOps Excellence',
-    description: 'Not just development — production-ready delivery with monitoring & scaling.',
-    metric: '99.9% Uptime',
+    icon: '✨',
+    title: 'Clean Execution',
+    description: 'Minimal chaos. Maximum clarity. We deliver exactly what we promise, on time.',
+    metric: 'Precision',
   },
   {
-    icon: '🛡️',
-    title: 'White-Label Friendly',
-    description: 'We operate under your brand & NDA. Your reputation is our priority.',
-    metric: 'Brand Safe',
+    icon: '📊',
+    title: 'Conversion-Focused',
+    description: 'Beauty meets purpose. Every pixel designed to drive action and results.',
+    metric: 'Results',
   },
   {
-    icon: '🤝',
-    title: 'Long-Term Partner',
-    description: 'We focus on consistent collaboration, not one-off gigs or fast exits.',
-    metric: 'Always Here',
+    icon: '🚀',
+    title: 'Long-Term Minded',
+    description: 'We think in years, not months. Your success is our reputation.',
+    metric: 'Committed',
   },
 ];
 
@@ -64,8 +64,8 @@ export default function WhyUs() {
     <section id="why" className="bg-white py-24 md:py-32 px-6" ref={sectionRef}>
       <div className="max-w-6xl mx-auto">
         <div ref={titleRef} className="opacity-0 text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Why Choose Us?</h2>
-          <p className="text-lg text-gray-600">What sets us apart from freelancers and generic dev shops</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Why Build Beyond Studio?</h2>
+          <p className="text-lg text-gray-600">We're not selling services. We're building partnerships.</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-16">

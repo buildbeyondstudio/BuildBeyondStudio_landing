@@ -4,28 +4,28 @@ import { useEffect, useRef } from 'react';
 
 const services = [
   {
+    icon: '�',
+    title: 'Brand Identity',
+    description: 'Strong, distinctive brand positioning that commands attention.',
+    features: ['Logo Design', 'Brand Strategy', 'Visual System', 'Brand Guidelines'],
+  },
+  {
     icon: '🌐',
-    title: 'Business Websites',
-    description: 'High-converting, responsive websites built for performance & lead generation.',
-    features: ['Responsive Design', 'SEO Optimized', 'Fast Loading', 'Lead Capture Forms'],
+    title: 'Website Design & Development',
+    description: 'Conversion-focused sites built on strategy, not trends.',
+    features: ['Responsive Design', 'Conversion Optimized', 'Fast & Secure', 'Analytics Ready'],
   },
   {
-    icon: '⚙️',
-    title: 'Web Applications',
-    description: 'Custom dashboards, portals & internal tools tailored to client workflows.',
-    features: ['Real-time Updates', 'User Management', 'API Integration', 'Data Analytics'],
+    icon: '📈',
+    title: 'SEO & Growth',
+    description: 'Strategic growth that builds sustainable, long-term visibility.',
+    features: ['Technical SEO', 'Content Strategy', 'Keyword Research', 'Growth Plan'],
   },
   {
-    icon: '🚀',
-    title: 'DevOps & Deployment',
-    description: 'Dockerized builds, server setup, CI/CD & production optimization.',
-    features: ['Docker Setup', 'Cloud Deployment', 'CI/CD Pipeline', 'Monitoring'],
-  },
-  {
-    icon: '🔧',
-    title: 'Maintenance & Scaling',
-    description: 'Ongoing updates, performance monitoring & technical support.',
-    features: ['24/7 Support', 'Performance Tuning', 'Security Updates', 'Scaling Support'],
+    icon: '✨',
+    title: 'Creative Direction',
+    description: 'Cohesive visual storytelling across all brand touchpoints.',
+    features: ['Art Direction', 'Content Creation', 'Visual Consistency', 'Brand Expression'],
   },
 ];
 
@@ -63,10 +63,10 @@ export default function Services() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16 md:mb-20">
           <div className="inline-block mb-4">
-            <span className="text-sm font-semibold text-blue-600 bg-blue-100 px-4 py-2 rounded-full">OUR EXPERTISE</span>
+            <span className="text-sm font-semibold text-blue-600 bg-blue-100 px-4 py-2 rounded-full">WHAT WE DO</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-black mb-4">Our Services</h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">Crafted solutions designed to transform your vision into reality</p>
+          <h2 className="text-4xl md:text-6xl font-bold text-black mb-4">Premium Services</h2>
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">Strategic, conversion-focused solutions built for modern businesses</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">

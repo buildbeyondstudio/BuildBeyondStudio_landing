@@ -41,8 +41,8 @@ export default function Testimonials() {
     <section className="bg-white py-12 md:py-16 px-4 sm:px-6">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-8 md:mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-2">Client Feedbacks</h2>
-          <p className="text-gray-600 text-sm md:text-base">Latest projects we've delivered</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-2">Trusted by Modern Founders</h2>
+          <p className="text-gray-600 text-sm md:text-base">Why leading brands choose Build Beyond Studio</p>
         </div>
 
         {/* Carousel */}
