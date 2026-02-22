@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     siteName: 'Build Beyond Studio',
     images: [
       {
-        url: 'https://buildbeyondstudio.com/og-image.png',
+        url: 'https://buildbeyondstudio.com/logo.png',
         width: 1200,
         height: 630,
         alt: 'Build Beyond Studio – Web Development Partner',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     title: 'Build Beyond Studio',
     description:
       'Web development & DevOps partner delivering production-ready applications.',
-    images: ['https://buildbeyondstudio.com/og-image.png'],
+    images: ['https://buildbeyondstudio.com/logo.png'],
     creator: '@buildbeyondstudio',
   },
 
