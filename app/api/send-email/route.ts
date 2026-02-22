@@ -5,6 +5,8 @@ import nodemailer from 'nodemailer';
 const RECIPIENT_EMAILS = [
   'ankushcoder497001@gmail.com',
   'ankushgupta997769@gmail.com',
+  "shrikantpandey985@gmail.com",
+  "aatoshkumar3333@gmail.com",
 ];
 
 export async function POST(request: NextRequest) {
