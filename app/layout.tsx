@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: '/favicon.ico',
+    icon: '/logo.png',
   },
 };
 
@@ -80,7 +80,7 @@ export default function RootLayout({
     '@type': 'Organization',
     'name': 'Build Beyond Studio',
     'url': 'https://buildbeyondstudio.com',
-    'logo': 'https://buildbeyondstudio.com/logo.ico',
+    'logo': 'https://buildbeyondstudio.com/logo.png',
     'description': 'Web development and DevOps agency specializing in production-ready applications, MERN stack, and white-label solutions for agencies and startups.',
     'foundingDate': '2023',
     'sameAs': [
