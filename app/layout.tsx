@@ -26,6 +26,16 @@ export const metadata: Metadata = {
   description:
     'Build Beyond Studio – Production-ready web applications with MERN stack, DevOps deployment, and white-label solutions for agencies.',
 
+  keywords: [
+    'web development agency',
+    'MERN stack development',
+    'DevOps services',
+    'white-label solutions',
+    'web application development',
+    'cloud deployment',
+    'production applications'
+  ],
+
   authors: [{ name: 'Build Beyond Studio' }],
   creator: 'Build Beyond Studio',
   publisher: 'Build Beyond Studio',
@@ -33,6 +43,14 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-snippet': -1,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+    },
   },
 
   alternates: {
@@ -42,31 +60,56 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://buildbeyondstudio.com',
-    title: 'Build Beyond Studio | Web Development & DevOps Partner',
+    title: 'Build Beyond Studio | Web Development & DevOps Agency',
     description:
       'Production-ready web applications with MERN stack, DevOps, and white-label solutions for agencies.',
     siteName: 'Build Beyond Studio',
     images: [
       {
         url: 'https://buildbeyondstudio.com/logo.png',
+        width: 512,
+        height: 512,
+        alt: 'Build Beyond Studio Logo',
+        type: 'image/png',
+      },
+      {
+        url: 'https://buildbeyondstudio.com/logo.png',
         width: 1200,
         height: 630,
         alt: 'Build Beyond Studio – Web Development Partner',
+        type: 'image/png',
       },
     ],
+    locale: 'en_US',
   },
 
   twitter: {
     card: 'summary_large_image',
-    title: 'Build Beyond Studio',
-    description:
-      'Web development & DevOps partner delivering production-ready applications.',
-    images: ['https://buildbeyondstudio.com/logo.png'],
+    site: '@buildbeyondstudio',
     creator: '@buildbeyondstudio',
+    title: 'Build Beyond Studio | Web Development & DevOps Agency',
+    description:
+      'Web development & DevOps partner delivering production-ready applications, MERN stack, and white-label solutions.',
+    images: {
+      url: 'https://buildbeyondstudio.com/logo.png',
+      alt: 'Build Beyond Studio Logo',
+    },
   },
 
   icons: {
-    icon: '/logo.png',
+    icon: [
+      { url: '/logo.png', sizes: '512x512', type: 'image/png' },
+      { url: '/logo.ico', sizes: 'any' },
+    ],
+    apple: '/apple-touch-icon.png',
+    other: [
+      { rel: 'manifest', url: '/manifest.json' },
+    ],
+  },
+
+  other: {
+    'apple-mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-status-bar-style': 'black-translucent',
   },
 };
 
@@ -75,13 +118,28 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const schemaData = {
+  // Production-grade structured data - Google-optimized
+  const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': 'https://buildbeyondstudio.com/#organization',
     'name': 'Build Beyond Studio',
     'url': 'https://buildbeyondstudio.com',
-    'logo': 'https://buildbeyondstudio.com/logo.png',
+    'logo': {
+      '@type': 'ImageObject',
+      'url': 'https://buildbeyondstudio.com/logo.png',
+      'width': 512,
+      'height': 512,
+      'caption': 'Build Beyond Studio Logo'
+    },
+    'image': {
+      '@type': 'ImageObject',
+      'url': 'https://buildbeyondstudio.com/logo.png',
+      'width': 512,
+      'height': 512
+    },
     'description': 'Web development and DevOps agency specializing in production-ready applications, MERN stack, and white-label solutions for agencies and startups.',
+    'alternativeHeadline': 'Web Development & DevOps Agency | Build Beyond Studio',
     'foundingDate': '2023',
     'sameAs': [
       'https://www.linkedin.com/company/buildbeyondstudio',
@@ -91,7 +149,8 @@ export default function RootLayout({
       '@type': 'ContactPoint',
       'telephone': '+91-93015-79493',
       'contactType': 'Sales/Partnership',
-      'areaServed': 'Worldwide'
+      'areaServed': 'Worldwide',
+      'availableLanguage': ['en']
     },
     'address': {
       '@type': 'PostalAddress',
@@ -107,17 +166,55 @@ export default function RootLayout({
     ]
   };
 
+  // WebSite schema with SearchAction - improves search appearance
+  const webSiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': 'https://buildbeyondstudio.com/#website',
+    'name': 'Build Beyond Studio',
+    'url': 'https://buildbeyondstudio.com',
+    'inLanguage': 'en-US',
+    'isPartOf': {
+      '@id': 'https://buildbeyondstudio.com/#organization'
+    },
+    'image': {
+      '@type': 'ImageObject',
+      'url': 'https://buildbeyondstudio.com/logo.png',
+      'width': 512,
+      'height': 512
+    },
+    'potentialAction': {
+      '@type': 'SearchAction',
+      'target': {
+        '@type': 'EntryPoint',
+        'urlTemplate': 'https://buildbeyondstudio.com?search={search_term_string}'
+      },
+      'query-input': 'required name=search_term_string'
+    }
+  };
+
+  // Combine schemas for JSON-LD
+  const structuredDataScript = {
+    '@context': 'https://schema.org',
+    '@graph': [organizationSchema, webSiteSchema]
+  };
+
   return (
     <html lang="en">
       <head>
         <meta name="keywords" content="web development agency, MERN stack development, DevOps services, white-label solutions, web application development, Build Beyond Studio" />
         <meta name="author" content="Build Beyond Studio" />
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        {/* Production-grade JSON-LD for Google Search - renders server-side */}
         <Script
           id="structured-data"
           type="application/ld+json"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(schemaData)
+            __html: JSON.stringify(structuredDataScript)
           }}
         />
       </head>
