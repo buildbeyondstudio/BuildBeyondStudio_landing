@@ -1,30 +1,30 @@
-import type { Metadata, Viewport } from 'next'
-import Script from 'next/script'
-import { Geist, Geist_Mono } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
-import './globals.css'
+import type { Metadata, Viewport } from "next";
+import Script from "next/script";
+import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import "./globals.css";
 
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const viewport: Viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
   maximumScale: 1,
   userScalable: false,
-  themeColor: '#0066ff',
-}
+  themeColor: "#0066ff",
+};
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://buildbeyondstudio.com'),
+  metadataBase: new URL("https://buildbeyondstudio.com"),
 
   title: {
-    default: 'Build Beyond Studio | Web Development & DevOps Agency',
-    template: '%s | Build Beyond Studio',
+    default: "Build Beyond Studio | Web Development & DevOps Agency",
+    template: "%s | Build Beyond Studio",
   },
 
   description:
-    'Build Beyond Studio – Production-ready web applications with MERN stack, DevOps deployment, and white-label solutions for agencies.',
+    "Build Beyond Studio – Production-ready web applications with MERN stack, DevOps deployment, and white-label solutions for agencies.",
 
   keywords: [
     'web development agency',
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: 'https://buildbeyondstudio.com',
+    canonical: "https://buildbeyondstudio.com",
   },
 
   openGraph: {
@@ -62,8 +62,8 @@ export const metadata: Metadata = {
     url: 'https://buildbeyondstudio.com',
     title: 'Build Beyond Studio | Web Development & DevOps Agency',
     description:
-      'Production-ready web applications with MERN stack, DevOps, and white-label solutions for agencies.',
-    siteName: 'Build Beyond Studio',
+      "Production-ready web applications with MERN stack, DevOps, and white-label solutions for agencies.",
+    siteName: "Build Beyond Studio",
     images: [
       {
         url: 'https://buildbeyondstudio.com/logo.png',
@@ -99,7 +99,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/logo.png', sizes: '512x512', type: 'image/png' },
-      { url: '/logo.ico', sizes: 'any' },
+      { url: '/logo.png', sizes: 'any' },
     ],
     apple: '/apple-touch-icon.png',
     other: [
@@ -116,7 +116,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   // Production-grade structured data - Google-optimized
   const organizationSchema = {
@@ -152,10 +152,10 @@ export default function RootLayout({
       'areaServed': 'Worldwide',
       'availableLanguage': ['en']
     },
-    'address': {
-      '@type': 'PostalAddress',
-      'streetAddress': 'India',
-      'addressCountry': 'IN'
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "India",
+      addressCountry: "IN",
     },
     'knowsAbout': [
       'Web Application Development',
@@ -202,7 +202,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="keywords" content="web development agency, MERN stack development, DevOps services, white-label solutions, web application development, Build Beyond Studio" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta
+          name="keywords"
+          content="web development agency, MERN stack development, DevOps services, white-label solutions, web application development, Build Beyond Studio"
+        />
         <meta name="author" content="Build Beyond Studio" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -223,5 +227,5 @@ export default function RootLayout({
         <Analytics />
       </body>
     </html>
-  )
+  );
 }
