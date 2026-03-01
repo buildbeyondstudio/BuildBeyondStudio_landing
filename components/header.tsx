@@ -40,13 +40,13 @@ export default function Header() {
             href="/services/web-applications"
             className="text-black hover:text-blue-600 transition-colors text-sm"
           >
-            Web Applications
+            Your Website
           </a>
           <a
             href="/#cases"
             className="text-black hover:text-blue-600 transition-colors text-sm"
           >
-            Case Studies
+            Our Work
           </a>
           <a
             href="/#why"
@@ -66,27 +66,9 @@ export default function Header() {
           >
             Blog
           </a>
-          <a
-            href="https://wa.me/919301579493?text=Hi%21%20I%20would%20like%20to%20discuss%20partnership%20opportunities%20with%20your%20agency."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cursor-pointer inline-flex items-center justify-center w-10 h-10 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-all hover:shadow-lg"
-            title="WhatsApp"
-          >
-            <FaWhatsapp className="w-5 h-5" />
-          </a>
         </nav>
 
         <div className="flex items-center gap-3 md:hidden">
-          <a
-            href="https://wa.me/919301579493?text=Hi%21%20I%20would%20like%20to%20discuss%20partnership%20opportunities%20with%20your%20agency."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cursor-pointer inline-flex items-center justify-center w-9 h-9 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-all"
-            title="WhatsApp"
-          >
-            <FaWhatsapp className="w-5 h-5" />
-          </a>
           <button
             className="cursor-pointer text-black"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -127,13 +109,13 @@ export default function Header() {
             href="/services/web-applications"
             className="text-black hover:text-blue-600 transition-colors"
           >
-            Web Applications
+            Your Website
           </a>
           <a
             href="/#cases"
             className="text-black hover:text-blue-600 transition-colors"
           >
-            Case Studies
+            Our Work
           </a>
           <a
             href="/#why"
@@ -152,15 +134,6 @@ export default function Header() {
             className="text-black hover:text-blue-600 transition-colors"
           >
             Blog
-          </a>
-          <a
-            href="https://wa.me/919301579493?text=Hi%21%20I%20would%20like%20to%20discuss%20partnership%20opportunities%20with%20your%20agency."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cursor-pointer inline-flex items-center justify-center gap-2 bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600 transition-all font-medium w-full"
-          >
-            <FaWhatsapp className="w-4 h-4" />
-            WhatsApp
           </a>
         </nav>
       )}
