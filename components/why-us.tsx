@@ -1,31 +1,36 @@
-'use client';
+"use client";
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
+import { Users, Briefcase, ShieldCheck, Layers } from "lucide-react";
 
 const differentiators = [
   {
-    icon: '🧠',
-    title: 'Strategic Thinking',
-    description: 'Every decision rooted in data. Every design choice purposeful. No guesswork.',
-    metric: 'Data-Driven',
+    icon: <Users className="w-6 h-6 text-blue-500" />,
+    title: "No Need to Hire Developers",
+    description:
+      "Offer full-scale digital services without building or managing an in-house technical team. We act as your dedicated execution partner.",
+    metric: "Scale Without Hiring",
   },
   {
-    icon: '✨',
-    title: 'Clean Execution',
-    description: 'Minimal chaos. Maximum clarity. We deliver exactly what we promise, on time.',
-    metric: 'Precision',
+    icon: <Briefcase className="w-6 h-6 text-blue-500" />,
+    title: "You Close the Client. We Deliver.",
+    description:
+      "Focus on strategy, sales, and client relationships while we handle the complete technical build — seamlessly and professionally.",
+    metric: "Execution Partner",
   },
   {
-    icon: '📊',
-    title: 'Conversion-Focused',
-    description: 'Beauty meets purpose. Every pixel designed to drive action and results.',
-    metric: 'Results',
+    icon: <ShieldCheck className="w-6 h-6 text-blue-500" />,
+    title: "Secure & Skilled Development",
+    description:
+      "Experienced developers, clean code, and secure systems. Every project is built to perform reliably and meet high professional standards.",
+    metric: "Trusted Quality",
   },
   {
-    icon: '🚀',
-    title: 'Long-Term Minded',
-    description: 'We think in years, not months. Your success is our reputation.',
-    metric: 'Committed',
+    icon: <Layers className="w-6 h-6 text-blue-500" />,
+    title: "White-Label & Long-Term Support",
+    description:
+      "Deliver under your brand with confidence. We support your agency behind the scenes — not just for one project, but for long-term growth.",
+    metric: "Built for Partnership",
   },
 ];
 
@@ -40,16 +45,19 @@ export default function WhyUs() {
         entries.forEach((entry, index) => {
           if (entry.isIntersecting) {
             if (entry.target === titleRef.current) {
-              entry.target.classList.add('animate-slide-in-up');
+              entry.target.classList.add("animate-slide-in-up");
             } else {
-              setTimeout(() => {
-                entry.target.classList.add('animate-slide-in-up');
-              }, (index - 1) * 150);
+              setTimeout(
+                () => {
+                  entry.target.classList.add("animate-slide-in-up");
+                },
+                (index - 1) * 150,
+              );
             }
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (titleRef.current) observer.observe(titleRef.current);
@@ -64,8 +72,13 @@ export default function WhyUs() {
     <section id="why" className="bg-white py-24 md:py-32 px-6" ref={sectionRef}>
       <div className="max-w-6xl mx-auto">
         <div ref={titleRef} className="opacity-0 text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Why Choose Build Beyond Studio?</h2>
-          <p className="text-lg text-gray-600">Leading web development agency for agencies seeking production-ready applications</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+            Why Choose Build Beyond Studio?
+          </h2>
+          <p className="text-lg text-gray-600">
+            Leading web development agency for agencies seeking production-ready
+            applications
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-16">
@@ -86,8 +99,12 @@ export default function WhyUs() {
                     {item.metric}
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-black mb-3">{item.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                <h3 className="text-2xl font-bold text-black mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {item.description}
+                </p>
               </div>
             </div>
           ))}
@@ -95,7 +112,9 @@ export default function WhyUs() {
 
         {/* Comparison Section */}
         <div className="bg-linear-to-r from-blue-600 to-blue-500 rounded-2xl p-8 md:p-12 text-white mb-16">
-          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center">Our Guarantee</h3>
+          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center">
+            Our Guarantee
+          </h3>
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
               <div className="text-3xl md:text-4xl font-bold mb-2">24-48h</div>
@@ -114,15 +133,15 @@ export default function WhyUs() {
 
         {/* Bottom CTA */}
         <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 md:p-12 text-center">
-          <h3 className="text-2xl font-bold text-black mb-4">Ready to Partner With Us?</h3>
+          <h3 className="text-2xl font-bold text-black mb-4">
+            Ready to Partner With Us?
+          </h3>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            We're not just developers. We're your extension team, committed to delivering production-ready solutions that make your clients happy.
+            We're not just developers. We're your extension team, committed to
+            delivering production-ready solutions that make your clients happy.
           </p>
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-all hover:shadow-lg font-semibold">
-            <a href="#contact">
-
-              Book a Consultation
-            </a>
+            <a href="#contact">Book a Consultation</a>
           </button>
         </div>
       </div>

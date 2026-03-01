@@ -2,31 +2,32 @@
 
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
+import {  CloudCog, Globe, Lightbulb, Paintbrush } from 'lucide-react';
 
 const services = [
   {
-    icon: '💻',
+    icon: <Globe className="w-6 h-6 text-blue-500" />,
     title: 'Web Application Development',
     description: 'Production-ready MERN stack applications built to scale from day one.',
     features: ['MERN Stack', 'Scalable Architecture', 'Production-Ready'],
     link: '/services/web-applications'
   },
   {
-    icon: '🚀',
+    icon: <CloudCog className="w-6 h-6 text-blue-500" />,
     title: 'DevOps & Deployment',
     description: 'Docker, CI/CD, cloud deployment, and infrastructure that handles growth.',
     features: ['Docker Setup', 'CI/CD Pipeline', 'Cloud Deployment'],
     link: '/services/devops'
   },
   {
-    icon: '🤝',
+    icon: <Paintbrush className="w-6 h-6 text-blue-500" />,
     title: 'White-Label Solutions',
     description: 'Build custom applications under your brand. Your reputation, our expertise.',
     features: ['Full IP Rights', 'Your Branding', 'Complete Ownership'],
     link: '/services/white-label'
   },
   {
-    icon: '⚙️',
+    icon: <Lightbulb className="w-6 h-6 text-blue-500" />,
     title: 'Technical Consulting',
     description: 'Strategic guidance on architecture, technology selection, and scalability.',
     features: ['Tech Strategy', 'Architecture Review', 'Best Practices'],

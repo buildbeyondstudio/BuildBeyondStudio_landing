@@ -1,13 +1,19 @@
-'use client';
+"use client";
 
-import { useState, useEffect, useRef } from 'react';
+import { MessageCircle } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
 
-const WHATSAPP_NUMBER = '+919301579493';
-const WHATSAPP_MESSAGE = 'Hi! I would like to discuss partnership opportunities with your agency.';
+const WHATSAPP_NUMBER = "+919301579493";
+const WHATSAPP_MESSAGE =
+  "Hi! I would like to discuss partnership opportunities with your agency.";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [status, setStatus] = useState('');
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("");
   const sectionRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
@@ -17,11 +23,11 @@ export default function Contact() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('animate-slide-in-up');
+            entry.target.classList.add("animate-slide-in-up");
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (titleRef.current) observer.observe(titleRef.current);
@@ -30,49 +36,67 @@ export default function Contact() {
     return () => observer.disconnect();
   }, []);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus('Sending...');
+    setStatus("Sending...");
 
     try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
       if (response.ok) {
-        setStatus('Thank you! We\'ll be in touch shortly.');
-        setFormData({ name: '', email: '', message: '' });
-        setTimeout(() => setStatus(''), 5000);
+        setStatus("Thank you! We'll be in touch shortly.");
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setStatus(""), 5000);
       } else {
-        setStatus('Something went wrong. Please try again.');
-        setTimeout(() => setStatus(''), 5000);
+        setStatus("Something went wrong. Please try again.");
+        setTimeout(() => setStatus(""), 5000);
       }
     } catch (error) {
-      setStatus('Error sending message. Please try again.');
-      setTimeout(() => setStatus(''), 5000);
+      setStatus("Error sending message. Please try again.");
+      setTimeout(() => setStatus(""), 5000);
     }
   };
 
   return (
-    <section id="contact" className="bg-gray-50 py-20 md:py-32 px-4 sm:px-6" ref={sectionRef}>
+    <section
+      id="contact"
+      className="bg-gray-50 py-20 md:py-32 px-4 sm:px-6"
+      ref={sectionRef}
+    >
       <div className="max-w-5xl mx-auto">
         <div ref={titleRef} className="opacity-0 text-center mb-12 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-3 md:mb-4">Partner with Build Beyond Studio</h2>
-          <p className="text-base sm:text-lg text-gray-700">Get in touch to discuss your web development project and how we can help scale your business.</p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-3 md:mb-4">
+            Partner with Build Beyond Studio
+          </h2>
+          <p className="text-base sm:text-lg text-gray-700">
+            Get in touch to discuss your web development project and how we can
+            help scale your business.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
           {/* Contact Form */}
           <div>
-            <form ref={formRef} onSubmit={handleSubmit} className="opacity-0 space-y-6">
+            <form
+              ref={formRef}
+              onSubmit={handleSubmit}
+              className="opacity-0 space-y-6"
+            >
               <div>
-                <label htmlFor="name" className="block text-sm font-semibold text-black mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-semibold text-black mb-2"
+                >
                   Name
                 </label>
                 <input
@@ -88,7 +112,10 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-black mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-semibold text-black mb-2"
+                >
                   Email
                 </label>
                 <input
@@ -104,7 +131,10 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-black mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-semibold text-black mb-2"
+                >
                   Message
                 </label>
                 <textarea
@@ -127,21 +157,29 @@ export default function Contact() {
               </button>
 
               {status && (
-                <p className={`text-sm text-center ${status.includes('Thank you') ? 'text-green-600' : 'text-blue-600'}`}>
+                <p
+                  className={`text-sm text-center ${status.includes("Thank you") ? "text-green-600" : "text-blue-600"}`}
+                >
                   {status}
                 </p>
               )}
             </form>
           </div>
-
           {/* WhatsApp Contact */}
           <div className="flex items-center justify-center">
             <div className="bg-white p-8 sm:p-10 rounded-xl border border-gray-200 hover:border-green-400 transition-all h-full flex flex-col items-center justify-center text-center">
-              <div className="text-6xl mb-6">💬</div>
-              <h3 className="font-bold text-black text-xl sm:text-2xl mb-3">Chat with us on WhatsApp</h3>
-              <p className="text-gray-600 text-sm sm:text-base mb-6">Connect with us directly for quick responses</p>
+              <MessageCircle className="w-14 h-14 text-green-600 mb-6" />
+
+              <h3 className="font-bold text-black text-xl sm:text-2xl mb-3">
+                Chat with us on WhatsApp
+              </h3>
+
+              <p className="text-gray-600 text-sm sm:text-base mb-6">
+                Connect with us directly for quick responses
+              </p>
+
               <a
-                href={`https://wa.me/${WHATSAPP_NUMBER.replace('+', '')}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`}
+                href={`https://wa.me/${WHATSAPP_NUMBER.replace("+", "")}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block cursor-pointer bg-green-600 text-white px-6 sm:px-8 py-3 rounded-lg hover:bg-green-700 transition-all font-semibold text-base"

@@ -1,5 +1,6 @@
 'use client';
 
+import { ClipboardCheck, RefreshCw, Rocket } from 'lucide-react';
 import { useEffect, useRef } from 'react';
 
 const workflow = [
@@ -86,51 +87,24 @@ export default function AgencyPartners() {
           </div>
         </div>
 
-        {/* Workflow */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-black mb-12 text-center">How We Work With You</h3>
-          <div className="relative">
-            {/* Connecting line (hidden on mobile) */}
-            <div className="hidden lg:block absolute top-8 left-0 right-0 h-0.5 bg-linear-to-r from-blue-200 via-blue-400 to-blue-200 z-0"></div>
-
-            <div className="grid md:grid-cols-5 gap-4 relative z-10">
-              {workflow.map((item, index) => (
-                <div
-                  key={index}
-                  ref={(el) => {
-                    workflowRef.current[index] = el;
-                  }}
-                  className="opacity-0"
-                >
-                  <div className="flex flex-col items-center text-center mb-4">
-                    <div className="w-16 h-16 bg-white border-4 border-blue-600 text-blue-600 rounded-full flex items-center justify-center font-bold text-xl mb-4 shadow-lg">
-                      {item.step}
-                    </div>
-                    <h4 className="font-bold text-black text-lg">{item.title}</h4>
-                  </div>
-                  <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+      
 
         {/* Key Benefits */}
         <div className="bg-gray-50 p-8 md:p-12 rounded-xl border border-gray-200">
           <h3 className="text-2xl font-bold text-black mb-6">What You Get</h3>
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <div className="text-3xl mb-2">📊</div>
+              <div className="text-3xl mb-2"><ClipboardCheck  className="w-6 h-6" /></div>
               <h4 className="font-bold text-black mb-2">Clear Scope & Timeline</h4>
               <p className="text-gray-600 text-sm">Detailed documentation ensures no surprises.</p>
             </div>
             <div>
-              <div className="text-3xl mb-2">💬</div>
+              <div className="text-3xl mb-2"><RefreshCw className="w-6 h-6" /></div>
               <h4 className="font-bold text-black mb-2">Weekly Updates</h4>
               <p className="text-gray-600 text-sm">Regular progress reports & direct communication.</p>
             </div>
             <div>
-              <div className="text-3xl mb-2">🚀</div>
+              <div className="text-3xl mb-2"><Rocket className="w-6 h-6" /></div>
               <h4 className="font-bold text-black mb-2">Production Ready</h4>
               <p className="text-gray-600 text-sm">Complete DevOps setup & ongoing support included.</p>
             </div>
